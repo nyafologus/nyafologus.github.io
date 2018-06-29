@@ -2,8 +2,6 @@
 
 >This is the 5th project for the Udacity [Front-End Web Dev Nanodegree](https://udacity.com/course/front-end-web-developer-nanodegree--nd001/ "Front-End Web Developer Nanodegree").
 
-![Jasmine Preview](/img/jasmine-preview.PNG "Jasmine in Action")
-
 ### How to load project:
 
 Copy/clone repository from Github using Git:
@@ -12,7 +10,7 @@ $ git clone git@github.com:nyafologus/frontend-nanodegree-feedreader.git
 ```
 Open ```index.html``` in your browser. 
 
-Alternatively, you can download it from [here](https://github.com/nyafologus/frontend-nanodegree-feedreader/archive/master.zip "Download ZIP"), or check it out live [here](https://nyafologus.github.io/feedreader/ "♥ Jasmine Test ♥")!
+Alternatively, you can download it from [here](https://github.com/nyafologus/frontend-nanodegree-feedreader/archive/master.zip "Download ZIP"), or check it out live [here](https://nyafologus.github.io/feedreader/index.html "♥ Jasmine Test ♥")!
 
 # Project Overview
 
