@@ -2,7 +2,7 @@
 
 >This is the 5th project for the Udacity [Front-End Web Dev Nanodegree](https://udacity.com/course/front-end-web-developer-nanodegree--nd001/ "Front-End Web Developer Nanodegree").
 
-![Jasmine Preview](img/jasmine-preview.png "Jasmine in Action")
+![Jasmine Preview](/img/jasmine-preview.PNG "Jasmine in Action")
 
 ### How to load project:
 

@@ -102,7 +102,7 @@ $(() => {
         let feedSelection1;
         let feedSelection2; 
         
-        beforeEach(function(done) {
+        beforeEach((done) => {
             $('.feed').empty();
             loadFeed(0, () => {                  
                 feedSelection1 = $('.feed').find(allFeeds.url);
