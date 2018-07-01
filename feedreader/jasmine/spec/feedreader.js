@@ -75,9 +75,9 @@ $(() => {
 
     /* Test suite for "Initial Entries" */
     describe('Initial Entries', () => {
-        /* Ensures when the loadFeed function is called and
-         * completes its work, there is at least a single .entry
-         * element within the .feed container. Remember, loadFeed()
+        /* Ensures that there is at least a single .entry element
+         * within the .feed container when the loadFeed function is
+         * called and completes its work. Remember, loadFeed()
          * is asynchronous so this test will require the use of
          * Jasmine's beforeEach and asynchronous done() function.
          */
@@ -88,15 +88,15 @@ $(() => {
         });
 
         it('ensure that Feed is not empty initially', () => {
-            expect($('.entry .feed')).toBeDefined();
+            // Using the parent descendant selector to grab the entry elements
+            expect($('.feed .entry').length).toBeGreaterThan(0);
         });
     });
 
     /* Test suite for changes in "New Feed Selection" */
     describe('New Feed Selection', () => {
-
-        /* TODO: Write a test that ensures when a new feed is loaded
-         * by the loadFeed function that the content actually changes.
+        /* Ensures that the content actually changes when a
+         * new feed is loaded by the loadFeed function.
          * Remember, loadFeed() is asynchronous.
          */
         let feedSelection1;
@@ -105,16 +105,17 @@ $(() => {
         beforeEach((done) => {
             $('.feed').empty();
             loadFeed(0, () => {                  
-                feedSelection1 = $('.feed').find(allFeeds.url);
-                done();
-            });
-            loadFeed(1, () => {
-                feedSelection2 = $('.feed').find(allFeeds.url);
-                done();
+                feedSelection1 = $('.feed').html();
+                loadFeed(1, () => {
+                    feedSelection2 = $('.feed').html();
+                    done();
+                });
             });
         });
 
         it('should be different from the previous selection of feeds', () => {
+            // console.log(feedSelection1);
+            // console.log(feedSelection2);
             expect(feedSelection1).not.toBe(feedSelection2);
         });
     });
